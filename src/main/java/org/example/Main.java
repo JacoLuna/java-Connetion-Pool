@@ -19,7 +19,7 @@ public class Main {
                     Connection connection = connectionPool.getConnection();
                     System.out.println("Thread " + threadId + " acquired connection " + connection.getId());
 
-                    // Simulate work
+                    // 'work'
                     connection.use();
 
                     System.out.println("Thread " + threadId + " releasing connection " + connection.getId());
@@ -31,6 +31,6 @@ public class Main {
         }
 
         threadPool.shutdown();
-        threadPool.awaitTermination(10, TimeUnit.SECONDS); // Wait for all threads to finish
+        threadPool.awaitTermination(10, TimeUnit.SECONDS);
     }
 }

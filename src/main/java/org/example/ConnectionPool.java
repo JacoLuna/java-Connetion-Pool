@@ -11,7 +11,7 @@ public class ConnectionPool {
     private ConnectionPool(int size) {
         pool = new ArrayBlockingQueue<>(size);
         for (int i = 0; i < size; i++) {
-            pool.add(new Connection(i + 1)); // Initialize pool with mock connections
+            pool.add(new Connection(i + 1));
         }
     }
 
